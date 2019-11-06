@@ -34,8 +34,11 @@ const text = (() => {
 
   function edit(e) {
     const texti = e.srcElement;
+    gamliTexti = texti.innerHTML;
+    debugger;
     const inputid = el('input','item__edit');
     inputid.setAttribute('type', 'text');
+    inputid.value=gamliTexti;
     texti.parentNode.replaceChild(inputid,texti);
     updateListeners();
   }
